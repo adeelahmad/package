@@ -1,0 +1,21 @@
+{
+  "name": "agent-handoff",
+  "version": "2.0.0",
+  "description": "Git for agents — a portable context packager. Package any body of work into a versioned, self-describing agent-to-agent handoff package with a git-style history that agents query through one static binary — never browse.",
+  "author": {
+    "name": "Adeel Ahmad",
+    "url": "https://github.com/adeelahmad"
+  },
+  "repository": "https://github.com/adeelahmad/agent-handoff",
+  "license": "MIT",
+  "keywords": [
+    "handoff",
+    "packaging",
+    "agents",
+    "versioning",
+    "history",
+    "content-addressed",
+    "git-for-agents",
+    "context"
+  ]
+}

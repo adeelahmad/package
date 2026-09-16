@@ -1,0 +1,42 @@
+# AGENTS.md — READ FIRST
+
+{{.Intake}}
+
+## SETTLED — do NOT re-investigate, re-confirm, or re-establish
+Established in prior sessions. Treat as INPUTS, not questions.
+{{range .Settled}}- {{.}}
+{{end}}
+## OPEN — resolve against the real material, or ask the human
+{{range .Open}}- {{.}}
+{{end}}
+## TASK ORDER — do these IN SEQUENCE; respect dependencies
+Complete one unit, then RETURN and report before starting the next. Do not run past the
+plan. Independent units may run in parallel; dependent units wait on their prerequisite.
+{{range .Tasks}}- {{.}}
+{{end}}
+## Workstreams (each planned/carried out separately; reconcile shared items)
+{{range .Workstreams}}- {{.}}
+{{end}}
+## Invariants (do not relax)
+{{range .Invariants}}- {{.}}
+{{end}}
+## History — there are NO old copies in this tree; ask the tool
+What you see here is the ONE current version. Every prior version is sealed inside
+`.handoff/` and is read only through the `handoff` binary — never by browsing it.
+
+    handoff history [PATH]              versions that changed PATH (file or dir), newest first — JSON
+    handoff show PATH --at v2           one file exactly as it was at v2
+    handoff diff PATH                   what the latest version changed in PATH (unified diff)
+    handoff extract PATH DEST --at v2   pull a file / dir / "." out of any version, standalone
+    handoff status                      what you have changed since the latest version
+
+If `.handoff/bin/` exists, the binary for your platform is there; otherwise it ships
+with the agent-handoff plugin. `handoff verify` proves the store is intact.
+
+## Handing back
+When your unit is done: `handoff commit -m "<what changed and why>"` — the comment is
+mandatory — then `handoff pack --out <name>.tar.gz`. Pack refuses a tree with
+uncommitted changes, so the package's history always matches its contents.
+{{if .Profile}}
+Profile: {{.Profile}} (a vocabulary preset; the format itself is domain-neutral)
+{{end}}Read order: see handoff.manifest.json.
