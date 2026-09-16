@@ -1,0 +1,21 @@
+{
+  "name": "agent-handoff",
+  "version": "2.0.0",
+  "description": "Git for agents — a portable context packager. Versioned agent-to-agent handoff packages with a git-style, queryable history (any domain).",
+  "commands": {
+    "handoff-package": {
+      "description": "Package this conversation into a versioned handoff package",
+      "run": "${PLUGIN_ROOT}/bin/handoff package"
+    },
+    "handoff-unpack": {
+      "description": "Inspect, unpack and refine a handoff package; query history with `handoff`",
+      "run": "${PLUGIN_ROOT}/bin/handoff inspect"
+    }
+  },
+  "skills": [
+    "skills/handoff-packager/SKILL.md",
+    "skills/handoff-unpacker/SKILL.md"
+  ],
+  "bin": "bin/handoff",
+  "_note": "UNVERIFIED against OpenCode's published plugin schema — best-effort descriptor; the Claude Code manifest is verified."
+}

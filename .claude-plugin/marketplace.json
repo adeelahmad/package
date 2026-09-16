@@ -1,0 +1,21 @@
+{
+  "name": "agent-handoff-marketplace",
+  "owner": {
+    "name": "Adeel Ahmad",
+    "url": "https://github.com/adeelahmad"
+  },
+  "plugins": [
+    {
+      "name": "agent-handoff",
+      "source": "./",
+      "description": "Git for agents — a portable context packager. Package any body of work into a versioned, self-describing agent-to-agent handoff package with a git-style history that agents query through one static binary — never browse.",
+      "category": "workflow",
+      "tags": [
+        "handoff",
+        "packaging",
+        "agents",
+        "versioning"
+      ]
+    }
+  ]
+}
