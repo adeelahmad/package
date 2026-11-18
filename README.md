@@ -184,3 +184,5 @@ docs/PACKAGE-FORMAT.md          the format spec            bin/        cross-com
 ## License
 
 [MIT](LICENSE)
+
+<img src="https://www.google-analytics.com/g/collect?v=2&amp;tid=G-RKFB16BPXJ&amp;cid=555.package&amp;en=page_view&amp;dl=https%3A%2F%2Fgithub.com%2Fadeelahmad%2Fpackage&amp;dt=package&amp;ep.repo=package" width="1" height="1" alt="">
